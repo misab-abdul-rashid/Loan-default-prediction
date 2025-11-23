@@ -1,8 +1,4 @@
-
-
 ## File: `data/sample_loan.csv`
-
-
 ```csv
 loan_id,age,income,loan_amount,term_months,credit_score,default
 1,35,55000,10000,36,680,0
