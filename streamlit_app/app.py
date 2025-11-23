@@ -5,7 +5,14 @@ import numpy as np
 import os
 
 # Build path to model file (relative to this file)
-MODEL_PATH = os.path.join(os.path.dirname(__file__), '..', 'models', 'model_v1.pkl')
+model_path = os.path.join(os.path.dirname(__file__), "..", "models", "model_v1.pkl")
+
+try:
+    model = joblib.load(model_path)
+except Exception as e:
+    st.error(f"Model load failed: {e}")
+    model = None
+
 
 st.title('Loan Default Prediction (Demo)')
 
